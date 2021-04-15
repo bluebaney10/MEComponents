@@ -1,0 +1,7 @@
+{
+    "files": ["app/components/components.ts"],
+    "compilerOptions": {
+      "noImplicitAny": true,
+      "target": "es5"
+    }
+  }
