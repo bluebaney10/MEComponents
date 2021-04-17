@@ -1,0 +1,460 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+}
+body{
+    overflow-x: hidden;
+}
+.admin-dashboard{
+    .container{
+        position:relative;
+        width:100%;
+    }
+
+    .navigation{
+        position:fixed;
+        width:300px;
+        height: 100%;
+        background:#003147;
+        transition:0.5s;
+        overflow:hidden;
+        &.active{
+            width: 60px;
+        }
+        ul{
+            position:absolute;
+            top:0;
+            left:0;
+            width:100%;
+            li{
+                position:relative;
+                width:100%;
+                list-style: none;
+                &:hover{
+                    background: #03a9f4;
+                }
+                &:nth-child(1){
+                    margin-bottom: 20px;
+                    &:hover{
+                        background: transparent;
+                    }
+                }
+
+                a{
+                    position: relative;
+                    display: block;
+                    width:100%;
+                    display: flex;
+                    text-decoration: none;
+                    color:#ffffff;
+
+                    .icon{
+                        position:relative;
+                        display: block;
+                        min-width: 60px;
+                        height: 60px;
+                        line-height: 60px;
+                        text-align: center;
+                         .fa{
+                            color:#ffffff;
+                            font-size: 24px;
+                        }
+                    }
+
+                    .title{
+                        position:relative;
+                        display: block;
+                        padding: 0 10px;
+                        height: 60px;
+                        line-height: 60px;
+                        white-space: nowrap;
+                    }
+                }
+            }
+        }
+    }
+
+    .main{
+        position:absolute;
+        width:calc(100% - 300px);
+        left:300px;
+        min-height: 100vh;
+        background: #f5f5f5;
+        transition:0.5s;
+        &.active{
+            width: calc(100% - 60px);
+            left:60px;
+        }
+
+        .topbar{
+            width:100%;
+            background: #ffffff;
+            height: 60px;
+            padding: 0 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .toggle{
+                position: relative;
+                width:60px;
+                height: 60px;
+                cursor: pointer;
+                &:before{
+                    content: '\f0c9';
+                    font-family: fontAwesome;
+                    position: absolute;
+                    width:100%;
+                    height:100%;
+                    line-height: 60px;
+                    font-size: 24px;
+                    text-align: center;
+                    color:#111111;
+                }
+
+            }
+
+            .search{
+                position: relative;
+                width: 400px;
+                margin:0 10px;
+
+                label{
+                    position: relative;
+                    width:100%;
+
+                    input{
+                        width: 100%;
+                        height: 40px;
+                        border-radius: 40px;
+                        padding:5x 20px;
+                        padding-left:35px;
+                        outline: none;
+                        border:1px solid rgba(0, 0, 0, 0.2)
+                    }
+                    .fa{
+                        position: absolute;
+                        left:15px;
+                        top:4px;
+                    }
+                }
+            }
+
+            .user{
+                position: relative;
+                min-width: 50px;
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                overflow:hidden;
+                 img{
+                    position: absolute;
+                    top:0;
+                    left: 0;
+                    width:100%;
+                    height: 100%;
+                    object-fit: cover;
+                 }
+            }
+        }
+
+        .cardBox{
+            position: relative;
+            width:100%;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            grid-gap:20px;
+
+            .card{
+                position: relative;
+                background: #ffffff;
+                padding: 20px;
+                display: flex;
+                justify-content: space-between;
+                cursor: pointer;
+
+                .numbers{
+                    position: relative;
+                    font-size: 2em;
+                    font-weight: 500;
+                }
+                .cardName{
+                    color: #999999;
+                }
+                .iconBox{
+                    font-size: 2.3em;
+                    color: #03a9f4;
+                }
+            }
+        }
+
+        .details{
+            position: relative;
+            width:100%;
+            padding: 20px;
+            display: grid;
+            grid-gap:20px;
+            grid-template-columns: 2fr 1fr;
+            table{
+                width: 100%;
+                border-collapse: collapse;
+                margin-top: 10px;
+                thead{
+                    td{
+                        font-weight: 600;
+                    }
+                }
+
+            }
+
+            .cardHeader{
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-start;
+
+                h2{
+                    font-weight: 600;
+                }
+            }
+
+            .recentOrders{
+                position: relative;
+                min-height: 530px;
+                background: #ffffff;
+                padding: 20px;
+                table{
+                    tr{
+                        border-bottom: solid 1px rgba(0, 0, 0, 0.2);
+                        td{
+                            padding: 10px 5px;
+                        }
+                    }
+                    thead{
+                        tr{
+                            td{
+                                &:last-child{
+                                    text-align: right;
+                                }
+                                &:nth-child(2){
+                                    text-align: right;
+                                    padding-right: 20px;
+                                }
+                                &:nth-child(3){
+                                    text-align: center;
+                                }
+                            }
+                        }
+                    }
+
+                    tbody{
+                        tr{
+                            &:last-child{
+                                border-bottom: none;
+                            }
+                            &:hover{
+                                background: #03a9f4;
+                                color: #ffffff;
+                            }
+                            td{
+                                &:last-child{
+                                    text-align: right;
+                                }
+
+                                &:nth-child(2){
+                                    text-align: right;
+                                    padding-right: 20px;
+                                }
+                                &:nth-child(3){
+                                    text-align: center;
+                                }
+                            }
+                        }
+                    }
+
+                }
+
+            }
+
+            .recentCustomers{
+                position: relative;
+                min-height: 530px;
+                background: #ffffff;
+                padding:20px;
+                table{
+                    tr{
+                        &:hover{
+                            background: #03a9f4;
+                            color: #ffffff;
+                            td{
+                                h4{
+                                    span{
+                                        background: #03a9f4;
+                                        color: #ffffff;
+                                    }
+                                }
+                            }
+                        }
+
+                         td{
+                            padding: 8px 10px;
+                            h4{
+                                font-size: 16px;
+                                font-weight: 500;
+                                line-height: 1.2em;
+                                span{
+                                    font-size: 14px;
+                                    color: #999999;
+                                }
+                            }
+                        }
+
+                    }
+                }
+                 .imgBx{
+                    position: relative;
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                    overflow:hidden;
+
+                    img{
+                        position: absolute;
+                        top:0;
+                        left:0;
+                        width:100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+            }
+
+            .status{
+                position:relative;
+                padding: 2px 4px;
+                color: #ffffff;
+                border-radius: 4px;
+                font-size: 14px;
+                font-weight: 300;
+                letter-spacing: 1px;
+                &.delivered{
+                    background: #8de02c;
+                }
+                &.pending{
+                    background: #f9ca3f;
+                }
+
+                &.return{
+                    background: #f00000;
+                }
+                &.inprogress{
+                    background: #1795ce;
+                }
+            }
+        }
+
+    }
+
+   .btn{
+        position: relative;
+        padding: 5px 10px;
+        background: #03a9f4;
+        color: #ffffff;
+        text-decoration: none;
+        border-radius: 6px;
+    }
+
+}
+
+@media(max-width:992px){
+    .admin-dashboard{
+        .navigation{
+            left:-300px;
+            &.active{
+                left:0;
+                width: 300px;
+            }
+        }
+        .main{
+            width: 100%;
+            left:0;
+            &.active{
+                width:calc(100% - 300px);
+                left:300px;
+            }
+            .cardBox{
+                grid-template-columns: repeat(2,1fr);
+              }
+        }
+    }
+}
+
+@media(max-width:768px){
+    .admin-dashboard{
+        .main{
+            .details{
+                grid-template-columns: repeat(1,1fr);
+
+                .cardHeader{
+                    h2{
+                        font-weight: 600;
+                        font-size: 18px;
+                    }
+                }
+
+            }
+        }
+
+    }
+}
+
+@media(max-width:480px){
+    .admin-dashboard{
+        .navigation{
+            width:100%;
+            left:-100%;
+            z-index: 1000;
+
+            &.active{
+                width:100%;
+                left:0;
+            }
+        }
+        .main{
+            width:100%;
+            left:0;
+            &.active{
+                width:100%;
+                left:0;
+            }
+            .topbar{
+                .toggle{
+                   &.active{
+                        z-index: 10000;
+                        position: fixed;
+                        right: 0;
+                        left:initial;
+                        &:before{
+                            color: #ffffff;
+                        }
+                    }
+                }
+            }
+            .cardBox {
+                grid-template-columns: repeat(1,1fr);
+            }
+            .details{
+                .recentOrders{
+                    overflow-x:auto;
+                    table{
+                        width:600px;
+                    }
+                }
+            }
+        }
+
+    }
+}

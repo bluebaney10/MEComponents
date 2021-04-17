@@ -1,11 +1,47 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8" />
     <title>ME Component</title>
+    <style>
+        .component-box{
+            padding: 50px 100px;
+        }
+        .container{
+            display: grid;
+            grid-gap: 10px;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            /* grid-template-columns: repeat(4, 1fr);*/
+            /*grid-template-columns: repeat(auto-fill, 186px);*/
+        }
+        p{
+            height: 100px;
+            border:solid 1px #111111;
+            border-radius: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            white-space: nowrap;
+        }
+    </style>
  </head>
   <body>
-  <h2><a href="components/component-menu">Component Menu</a></h2>
+      <div class="component-box">
+        <div class="container">
+            <p><a href="components/component-menu">Component Menu</a></p>
+            <p><a href="components/component-footer-grid">Component Footer Grid</a></p>
+            <p><a href="components/component-contact-form">Component Contact Form</a></p>
+            <p><a href="components/component-admin-dashboard">component-admin-dashboard</a></p>
+            <p><a href="components/component-full-page-scrolling">component-full-page-scrolling</a></p>
+            <p><a href="components/parallax-background">parallax-background</a></p>
+            <p><a href="components/parallax-scrolling/_theme/">parallax-Scrolling</a></p>
+            <p><a href="components/effect-scrolling/_theme/">Effect-Scrolling</a></p>
+            <p><a href="components/effect-direction-hover/_theme/">Effect-direction-hover</a></p>
+            <p><a href="components/responsive-web-cooking">Responsive-Web-cooking</a></p>
+        </div>
+      </div>
+
 </body>
 
 </html>

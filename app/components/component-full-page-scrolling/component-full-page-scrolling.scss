@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+}
+
+.full-page-scrolling{
+    .container{
+        position:relative;
+        width: 100%;
+        height: 100vh;
+        overflow:auto;
+        scroll-snap-type: y mandatory;
+    }
+    .section{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        scroll-snap-align: start;
+        background-blend-mode: multiply;
+        &:nth-child(1){
+            background: #f00 url(../../component-full-page-scrolling/images/bg1.jpg);
+            background-size:cover;
+            background-attachment: fixed;
+        }
+        &:nth-child(2){
+            background: #0f0 url(../../component-full-page-scrolling/images/bg2.jpg);
+            background-size:cover;
+            background-attachment: fixed;
+        }
+        &:nth-child(3){
+            background: #ff0 url(../../component-full-page-scrolling/images/bg3.jpg);
+            background-size:cover;
+            background-attachment: fixed;
+        }
+        &:nth-child(4){
+            background: #0ff url(../../component-full-page-scrolling/images/bg4.jpg);
+            background-size:cover;
+            background-attachment: fixed;
+        }
+        &:nth-child(5){
+            background: #00f url(../../component-full-page-scrolling/images/bg5.jpg);
+            background-size:cover;
+            background-attachment: fixed;
+        }
+        .content{
+            position: absolute;
+            bottom: 50px;
+            left:50px;
+            max-width: 700px;
+             h2{
+                background: #ffffff;
+                color: #111111;
+                font-weight: 600;
+                display: inline-block;
+                padding:10px 20px;
+                font-size:2em ;
+            }
+            p{
+                background: #ffffff;
+                color: #111111;
+                font-weight: 300;
+                padding:10px 20px;
+                margin-top:10px;
+            }
+        }
+    }
+
+}
