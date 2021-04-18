@@ -3,13 +3,20 @@ import { componentMenu } from "./component-menu/component-menu";
 import { componentAdminDashboard } from "./component-admin-dashboard/component-admin-dashboard";
 import { parallaxBackground } from "./parallax-background/parallax-background";
 import { responsiveWebCooking } from "./responsive-web-cooking/responsive-web-cooking";
+import { sliderFullPage } from "./slider-full-page/slider-full-page";
+import { landingPepsi } from "./landing-pepsi/landing-pepsi";
+import {popupNewsletter} from "./popup-newsletter/popup-newsletter";
+
 export class MeComponents {
     public components: Array<IComponent> = [];
 
     constructor() {
         componentMenu();
         componentAdminDashboard();
-        responsiveWebCooking();
+        //responsiveWebCooking();
+        //sliderFullPage();
+        landingPepsi();
+        popupNewsletter();
         this.createparallaxBackground();
 
     }

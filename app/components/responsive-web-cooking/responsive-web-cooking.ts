@@ -5,19 +5,19 @@ export function responsiveWebCooking() {
     });
 
     //menuToggle
-    document.querySelector('.menuToggle').addEventListener('click',()=>{
+    document.querySelector('.responsive-web-cooking .menuToggle').addEventListener('click',() => {
          toggleMenu();
     });
 
-    document.querySelectorAll('.nav-menu').forEach((item:HTMLElement)=>{
+    document.querySelectorAll('.responsive-web-cooking .nav-menu').forEach((item:HTMLElement)=>{
         item.addEventListener('click', () => {
             toggleMenu();
         });
     });
 
     function toggleMenu(){
-        const menuToggle=document.querySelector('.menuToggle');
-        const navigation=document.querySelector('.navigation');
+        const menuToggle=document.querySelector('.responsive-web-cooking .menuToggle');
+        const navigation=document.querySelector('.responsive-web-cooking .navigation');
         menuToggle.classList.toggle('active');
         navigation.classList.toggle('active');
     }
