@@ -6,6 +6,8 @@ import { responsiveWebCooking } from "./responsive-web-cooking/responsive-web-co
 import { sliderFullPage } from "./slider-full-page/slider-full-page";
 import { landingPepsi } from "./landing-pepsi/landing-pepsi";
 import {popupNewsletter} from "./popup-newsletter/popup-newsletter";
+import {popupBlurredBg} from "./popup-blurred-bg/popup-blurred-bg";
+//import { sliderFullPage } from "./slider-full-page/slider-full-page";
 
 export class MeComponents {
     public components: Array<IComponent> = [];
@@ -16,7 +18,8 @@ export class MeComponents {
         //responsiveWebCooking();
         //sliderFullPage();
         landingPepsi();
-        popupNewsletter();
+        //popupNewsletter();
+        popupBlurredBg();
         this.createparallaxBackground();
 
     }
