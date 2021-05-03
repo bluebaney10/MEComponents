@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
+
+*
+{
+	margin: 0;
+	padding: 0;
+    box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+}
+section{
+    height: 100vh;
+
+    &.sec1{
+        background:url(../../effect-bg-fix-scrolling/images/image1.jpg);
+        background-attachment: fixed;
+    }
+    &.sec2{
+        background:url(../../effect-bg-fix-scrolling/images/image2.jpg);
+        background-attachment: fixed;
+    }
+    &.sec3{
+        background:url(../../effect-bg-fix-scrolling/images/image3.jpg);
+        background-attachment: fixed;
+    }
+    &.sec4{
+        background:url(../../effect-bg-fix-scrolling/images/image4.jpg);
+        background-attachment: fixed;
+    }
+    &.sec5{
+        background:url(../../effect-bg-fix-scrolling/images/image5.jpg);
+        background-attachment: fixed;
+    }
+}

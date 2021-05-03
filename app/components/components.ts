@@ -7,6 +7,8 @@ import { sliderFullPage } from "./slider-full-page/slider-full-page";
 import { landingPepsi } from "./landing-pepsi/landing-pepsi";
 import {popupNewsletter} from "./popup-newsletter/popup-newsletter";
 import {popupBlurredBg} from "./popup-blurred-bg/popup-blurred-bg";
+import {componentImageComparision} from "./component-image-comparision/component-image-comparision";
+import {componentLoginRegister} from "./component-login-register/component-login-register";
 //import { sliderFullPage } from "./slider-full-page/slider-full-page";
 
 export class MeComponents {
@@ -19,8 +21,10 @@ export class MeComponents {
         //sliderFullPage();
         landingPepsi();
         //popupNewsletter();
-        popupBlurredBg();
+        //popupBlurredBg();
         this.createparallaxBackground();
+        componentImageComparision();
+        componentLoginRegister();
 
     }
 
