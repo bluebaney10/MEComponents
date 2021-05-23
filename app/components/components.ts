@@ -10,6 +10,8 @@ import {popupBlurredBg} from "./popup-blurred-bg/popup-blurred-bg";
 import {componentImageComparision} from "./component-image-comparision/component-image-comparision";
 import {componentLoginRegister} from "./component-login-register/component-login-register";
 //import { sliderFullPage } from "./slider-full-page/slider-full-page";
+//import {componentToggleTheme} from "./component-toggle-theme/component-toggle-theme";
+import {componentReadMore} from "./component-read-more/component-read-more";
 
 export class MeComponents {
     public components: Array<IComponent> = [];
@@ -25,6 +27,8 @@ export class MeComponents {
         this.createparallaxBackground();
         componentImageComparision();
         componentLoginRegister();
+        //componentToggleTheme();
+        componentReadMore();
 
     }
 
