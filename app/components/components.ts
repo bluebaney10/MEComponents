@@ -12,7 +12,8 @@ import {componentLoginRegister} from "./component-login-register/component-login
 //import { sliderFullPage } from "./slider-full-page/slider-full-page";
 //import {componentToggleTheme} from "./component-toggle-theme/component-toggle-theme";
 import {componentReadMore} from "./component-read-more/component-read-more";
-
+import {effectAnimateMenuIndicator} from "./effect-animate-menu-indicator/effect-animate-menu-indicator";
+import {componentMenuLayer} from "./component-menu-layer/component-menu-layer";
 export class MeComponents {
     public components: Array<IComponent> = [];
 
@@ -25,11 +26,12 @@ export class MeComponents {
         //popupNewsletter();
         //popupBlurredBg();
         this.createparallaxBackground();
-        componentImageComparision();
+        //componentImageComparision();
         componentLoginRegister();
         //componentToggleTheme();
         componentReadMore();
-
+        effectAnimateMenuIndicator();
+        componentMenuLayer();
     }
 
     private createparallaxBackground() {
