@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
+
+*
+{
+	margin: 0;
+	padding: 0;
+    box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #dcdcdc;
+}
+
+.container{
+    position: relative;
+    width: 1200px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    grid-gap:20px;
+    padding: 20px;
+
+    .card{
+        width: 100%;
+        background: #ffffff;
+
+        &:hover{
+            .imgBx{
+                img{
+                    transform: scale(1.5);
+                }
+            }
+            .action{
+                li{
+                    transform: translateX(0px);
+
+                }
+            }
+        }
+
+        .imgBx{
+            position: relative;
+            width: 100%;
+            height: 310px;
+            overflow: hidden;
+            img{
+                position: absolute;
+                top:0;
+                left:0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition:0.5s ease-in-out;
+                transform-origin: right;
+            }
+
+        }
+        .content{
+            padding: 10px;
+            .productName{
+                h3{
+                    font-size: 18px;
+                    font-weight: 500;
+                    color: #333333;
+                    margin: 5px 0;
+                }
+            }
+
+            .price-rating{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                h2{
+                    font-size: 20px;
+                    color:#ff2020;
+                    font-weight: 500;
+                }
+                .fa{
+                    color: #ffd513;
+                    cursor: pointer;
+                    &.grey{
+                        color: #cccccc;
+                    }
+                }
+            }
+        }
+        .action{
+            position: absolute;
+            top:10px;
+            right: 10px;
+            li{
+                position: relative;
+                list-style: none;
+                width: 40px;
+                height: 40px;
+                background: #ffffff;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 4px;
+                cursor: pointer;
+                transform: translateX(60px);
+                transition: transform 0.5s;
+                &:hover{
+                    background: #ff2020;
+                    color: #ffffff;
+                    span{
+                        opacity: 1;
+                        transform:translateY(-50%) translateX(0px);
+                    }
+                }
+
+                &:nth-child(2){
+                    transition-delay: 0.15s;
+                }
+                &:nth-child(3){
+                    transition-delay: 0.3s;
+                }
+
+                span{
+                    position: absolute;
+                    right: 50px;
+                    top:50%;
+                    transform:translateY(-50%) translateX(-20px);
+                    white-space: nowrap;
+                    padding: 4px 6px;
+                    background: #ffffff;
+                    color: #333333;
+                    font-weight: 500;
+                    font-size: 12px;
+                    border-radius: 4px;
+                    pointer-events: none;
+                    opacity: 0;
+                    transition:0.5s;
+
+                    &::before{
+                        content: '';
+                        position: absolute;
+                        top:50%;
+                        right: -4px;
+                        width: 8px;
+                        height: 8px;
+                        background: #ffffff;
+                        transform:translateY(-50%) rotate(45deg);
+                    }
+                }
+            }
+        }
+    }
+}
